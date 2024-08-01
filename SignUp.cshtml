@@ -1,0 +1,147 @@
+﻿
+@{
+    Layout = null;
+}
+
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Login</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: 'Segoe UI';
+            margin: 0;
+            background: #f3f3f3;
+        }
+
+        .main {
+            display: block;
+            text-align: center;
+            padding: 10px 20px;
+            width: 500px;
+            border-radius: 15px;
+            background: white;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            color: #4CAF50;
+        }
+
+        label {
+            display: block;
+            width: 100%;
+            text-align: left;
+            margin-top: 10px;
+            margin-bottom: 15px;
+            color: #555;
+        }
+
+        input {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        button {
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px;
+            margin-top: 10px;
+            margin-bottom: 15px;
+            width: 100%;
+            border-radius: 10px;
+            border: none;
+            font-size: 17px;
+        }
+
+        .message {
+            color: red;
+            display: none;
+        }
+    </style>
+
+    <script>
+  function validateEmail(){
+            const emailField = document.getElementById('email');
+            const message = document.getElementById('message');
+             const submit = document.getElementById('btnsubmit');
+
+            const emailValue = emailField.value;
+            if (emailValue && !emailValue.endsWith('gmail.com')) {
+                message.style.display = 'block';
+
+
+
+            } else {
+                message.style.display = 'none';
+                submit.disabled = false;
+            }
+        }
+
+       
+       
+    </script>
+</head>
+<body>
+
+    <div class="main">
+        <h1>
+            SESSION NO.3
+        </h1>
+        <h3>
+          SIGNUP 
+        </h3>
+        <h3>
+         | ENCRYPTION | DECRYPTION |
+        </h3>
+        <form action="Signup" method="post">
+            <label>
+                Enter Name:
+            </label>
+            <input name="fname" type="text" id="fname" required />
+             <label>
+                Last Name:
+            </label>
+            <input name="lname" type="text" id="lname" required />
+
+            <label>
+                Enter PhoneNo:
+            </label>
+            <input name="phone" type="tel" id="phone" required />
+
+            <label>
+                Enter Email:
+            </label>
+            <input name="email" type="email" id="email" onfocus="hideMessage()" required onblur="validateEmail()" />
+            <label>
+                Enter Password:
+            </label>
+            <input name="password" type="password" id="password" required />
+           
+            <div class="wrap">
+                <button value="submit" id="btnsubmit" >
+                    Submit
+                </button>
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>
